@@ -1,5 +1,5 @@
 # Hapi Router Coffee
-[![Build Status](https://travis-ci.org/ethanmick/hapi-router-coffee.svg?branch=master)](https://travis-ci.org/ethanmick/hapi-router-coffee.svg?branch=master)
+[![Build Status](https://travis-ci.org/ethanmick/hapi-router-coffee.svg?branch=master)](https://travis-ci.org/ethanmick/hapi-router-coffee.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/ethanmick/hapi-router-coffee/badge.svg?branch=master)](https://coveralls.io/r/ethanmick/hapi-router-coffee?branch=master)
 
 An Opinionated Route Loader for [Hapi](https://github.com/hapijs/hapi) for CoffeeScript files.
 
