@@ -1,36 +1,61 @@
 {
-  "name": "hapi-router",
-  "version": "2.1.0",
-  "description": "Opinionated route loader for hapi",
+  "name": "hapi-router-coffee",
+  "version": "1.0.0",
+  "description": "An Opinionated Route Loader for Hapi for CoffeeScript files.",
   "main": "./lib",
   "scripts": {
-    "test": "istanbul cover _mocha --"
+    "test": "npm run _test; npm run cov; npm run lint;",
+    "_test": "mocha --compilers coffee:coffee-script/register",
+    "cov": "mocha --compilers coffee:coffee-script/register --require ./node_modules/blanket-node/bin/index.js -R travis-cov",
+    "lint": "coffeelint ./lib ./test",
+    "check-dependencies": "david"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/enjoy/hapi-router.git"
+    "url": "git://github.com/ethanmick/hapi-router-coffee.git"
   },
   "keywords": [
     "hapi",
     "spumko",
     "routes",
-    "router"
+    "router",
+    "coffee-script"
   ],
-  "author": "Enjoy",
+  "author": "Enjoy, Ethan Mick",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bsiddiqi/hapi-router/issues"
+    "url": "https://github.com/ethanmick/hapi-router-coffee/issues"
   },
-  "homepage": "https://github.com/enjoy/hapi-router",
+  "homepage": "https://github.com/ethanmick/hapi-router-coffee",
+  "config": {
+    "blanket": {
+      "pattern": "lib",
+      "shortnames": true,
+      "data-cover-reporter-options": {
+        "shortnames": true
+      },
+      "data-cover-never": "node_modules",
+      "loader": "./node-loaders/coffee-script"
+    },
+    "travis-cov": {
+      "threshold": 100
+    }
+  },
   "devDependencies": {
-    "chai": "^1.10.0",
-    "chai-as-promised": "^4.1.1",
-    "hapi": "^8.0.0",
-    "istanbul": "^0.3.2",
-    "mocha": "^2.0.1"
+    "blanket-node": "2.0.0-beta1",
+    "chai": "2.1.0",
+    "chai-as-promised": "4.2.0",
+    "coffeelint": "1.9.2",
+    "coffeelint-use-strict": "0.0.1",
+    "david": "6.1.4",
+    "hapi": "8.2.0",
+    "mocha": "2.1.0",
+    "travis-cov": "0.2.5"
   },
   "peerDependencies": {
-    "hapi": "^8.0.0"
+    "hapi": "8.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "coffee-script": "1.9.1"
+  }
 }
