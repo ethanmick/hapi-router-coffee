@@ -4,9 +4,10 @@
   "description": "An Opinionated Route Loader for Hapi for CoffeeScript files.",
   "main": "./lib",
   "scripts": {
-    "test": "npm run _test; npm run cov; npm run lint;",
+    "test": "npm run _test; npm run cov; npm run lint; npm run coveralls;",
     "_test": "mocha --compilers coffee:coffee-script/register",
     "cov": "mocha --compilers coffee:coffee-script/register --require ./node_modules/blanket-node/bin/index.js -R travis-cov",
+    "coveralls": "mocha --compilers coffee:coffee-script/register --require ./node_modules/blanket-node/bin/index.js --reporter mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "coffeelint ./lib ./test",
     "check-dependencies": "david"
   },
@@ -47,9 +48,11 @@
     "chai-as-promised": "4.2.0",
     "coffeelint": "1.9.2",
     "coffeelint-use-strict": "0.0.1",
+    "coveralls": "2.11.2",
     "david": "6.1.4",
     "hapi": "8.2.0",
     "mocha": "2.1.0",
+    "mocha-lcov-reporter": "0.0.2",
     "travis-cov": "0.2.5"
   },
   "peerDependencies": {
