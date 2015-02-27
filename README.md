@@ -1,4 +1,4 @@
-#hapi-router
+# Hapi Router Coffee
 [![Build Status](https://travis-ci.org/ethanmick/hapi-router-coffee.svg?branch=master)](https://travis-ci.org/ethanmick/hapi-router-coffee.svg?branch=master)
 
 An Opinionated Route Loader for [Hapi](https://github.com/hapijs/hapi) for CoffeeScript files.
