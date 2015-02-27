@@ -1,5 +1,5 @@
 #hapi-router
-[![Build Status](https://travis-ci.org/enjoy/hapi-router.svg?branch=master)](https://travis-ci.org/enjoy/hapi-router) [![Code Climate](https://codeclimate.com/github/enjoy/hapi-router/badges/gpa.svg)](https://codeclimate.com/github/enjoy/hapi-router) [![Test Coverage](https://codeclimate.com/github/enjoy/hapi-router/badges/coverage.svg)](https://codeclimate.com/github/enjoy/hapi-router) [![Version](https://badge.fury.io/js/hapi-router.svg)](http://badge.fury.io/js/hapi-router)
+[![Build Status](https://travis-ci.org/ethanmick/hapi-router-coffee.svg?branch=master)](https://travis-ci.org/ethanmick/hapi-router-coffee.svg?branch=master)
 
 An Opinionated Route Loader for [Hapi](https://github.com/hapijs/hapi) for CoffeeScript files.
 
