@@ -21,6 +21,16 @@ describe 'hapi-router', ->
     }, (err)->
       throw err if err
 
-  it 'can load routes', ->
+  it 'should load routes', ->
     register routesDir: __dirname + '/routes/'
+    expect(server.connections[0].table()).to.have.length(4)
+
+  it 'should add defaults if an option', ->
+    register
+      routesDir: __dirname + '/routes/'
+      routesOptions:
+        config:
+          timeout:
+            socket: no
+
     expect(server.connections[0].table()).to.have.length(4)

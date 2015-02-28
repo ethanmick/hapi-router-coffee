@@ -2,9 +2,11 @@
 
 fs = require 'fs'
 path = require 'path'
+_ = require 'lodash'
 
 exports.register = (server, options, next)->
   routes = []
+  opts = options.routesOptions or {}
 
   readRoutes = (dir)->
     fs.readdirSync(dir).forEach (file)->
@@ -16,9 +18,13 @@ exports.register = (server, options, next)->
       if ext is '.js' or ext is '.coffee'
         route = require(filePath)
         if Array.isArray(route)
+          routes.forEach (r)->
+            _.merge(r, opts)
           routes = routes.concat(route)
         else if route isnt null and typeof route is 'object'
-          routes.push(r) for key, r of route
+          for key, r of route
+            _.merge(r, opts)
+            routes.push(r)
       routes
 
   readRoutes(options.routesDir)

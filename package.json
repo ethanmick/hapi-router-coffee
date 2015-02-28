@@ -59,6 +59,7 @@
     "hapi": "8.2.0"
   },
   "dependencies": {
-    "coffee-script": "1.9.1"
+    "coffee-script": "1.9.1",
+    "lodash": "3.3.1"
   }
 }
