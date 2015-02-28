@@ -23,4 +23,4 @@ describe 'hapi-router', ->
 
   it 'can load routes', ->
     register routesDir: __dirname + '/routes/'
-    expect(server.connections[0].table()).to.have.length(3)
+    expect(server.connections[0].table()).to.have.length(4)

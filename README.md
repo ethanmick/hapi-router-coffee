@@ -16,7 +16,7 @@ $ npm install hapi-router-coffee --save
 I assume you're writing in CoffeeScript, right?
 ```coffee
 server.register {
-  register: require('hapi-router')
+  register: require('hapi-router-coffee')
   options:
     routesDir: __dirname + '/routes/'
 }, (err)->
