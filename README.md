@@ -18,7 +18,7 @@ I assume you're writing in CoffeeScript, right?
 server.register {
   register: require('hapi-router-coffee')
   options:
-    routesDir: __dirname + '/routes/'
+    routesDir: "#{__dirname}/routes/"
 }, (err)->
   throw err if err
 }
@@ -28,6 +28,18 @@ server.register {
 
 The following required `options` should be provided at registration:
 * `routesDir`: the path to your routes directory
+* `routesOptions` : Options to pass into the `config` of each route.
+
+Note that the options are not really needed, since you can just use the Hapi server for options. This may be useful in the future though!
+
+```coffee
+server = new Hapi.Server({
+    connections:
+      routes:
+        payload:
+          timeout: no # Sets payload timeout to false on ALL routes.
+})
+```
 
 ## Specifying Routes
 Any `.js` or `.coffee` files in your routes directory will be loaded - supports nested routes.
