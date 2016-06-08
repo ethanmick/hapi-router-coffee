@@ -3,9 +3,9 @@
 
 An Opinionated Route Loader for [Hapi](https://github.com/hapijs/hapi) for CoffeeScript files.
 
-This fork does two things, which may interest you:
-1. Written in CoffeeScript (and **not** compiled to JS), so it can autoload .coffee files.
-2. Allows you to pass options to the routes, and merge in the options already on the route.
+This fork does two things, which may interest you:  
+1. Written in CoffeeScript (and **not** compiled to JS), so it can autoload .coffee files.  
+2. Allows you to pass options to the routes, and merge in the options already on the route.  
 
 ## Setup
 
