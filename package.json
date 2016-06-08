@@ -1,6 +1,6 @@
 {
   "name": "hapi-router-coffee",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "An Opinionated Route Loader for Hapi for CoffeeScript files.",
   "main": "./lib",
   "scripts": {
@@ -44,7 +44,7 @@
     "lodash": "3.10.1"
   },
   "peerDependencies": {
-    "hapi": "~12.x.x"
+    "hapi": "*"
   },
   "devDependencies": {
     "blanket-node": "2.0.0",
@@ -53,7 +53,7 @@
     "coffeelint": "1.13.1",
     "coffeelint-use-strict": "1.0.0",
     "david": "6.4.0",
-    "hapi": "~12.x.x",
+    "hapi": "*",
     "mocha": "2.3.3"
   }
 }
