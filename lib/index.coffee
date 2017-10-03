@@ -18,7 +18,7 @@ exports.register = (server, options, next)->
       if ext is '.js' or ext is '.coffee'
         route = require(filePath)
         if Array.isArray(route)
-          routes.forEach (r)->
+          route.forEach (r)->
             _.merge(r, opts)
           routes = routes.concat(route)
         else if route isnt null and typeof route is 'object'
